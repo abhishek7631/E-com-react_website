@@ -1,0 +1,17 @@
+.topBtns {
+  width: 40%;
+  margin: 20px auto;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btnTop {
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+}
