@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios"; // Ensure axios is imported
+import axios from "axios";
 
 export default function Cart({ selectedCategory }) {
   const [data, setData] = useState([]);
