@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios"; // Ensure axios is imported
 
-export default function Cart() {
+export default function Cart({ selectedCategory }) {
   const [data, setData] = useState([]);
 
   const getData = async () => {
@@ -13,6 +13,11 @@ export default function Cart() {
     getData();
   }, []);
 
+  const filteredData =
+    selectedCategory === "all"
+      ? data
+      : data.filter((item) => item.category === selectedCategory);
+
   return (
     <div
       style={{
@@ -21,7 +26,7 @@ export default function Cart() {
         justifyContent: "space-around",
       }}
     >
-      {data.map((item) => (
+      {filteredData.map((item) => (
         <div
           key={item.id}
           style={{
