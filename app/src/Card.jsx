@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function Cart({ selectedCategory }) {
+export default function Card({ selectedCategory, onAddToCart }) {
   const [data, setData] = useState([]);
 
   const getData = async () => {
@@ -37,15 +37,21 @@ export default function Cart({ selectedCategory }) {
             borderRadius: "20px",
           }}
         >
-          <h3>{item.title}</h3>
-          <hr />
           <img
             src={item.image}
             alt={item.title}
             style={{ width: "150px", height: "200px" }}
           />
+          <hr />
+          <h3>{item.title}</h3>
+
           <div>
-            <button style={{ marginLeft: "100px" }}>Add to cart</button>
+            <button
+              style={{ marginLeft: "100px" }}
+              onClick={() => onAddToCart(item)}
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       ))}
