@@ -62,4 +62,3 @@ export default function Card({ selectedCategory, onAddToCart }) {
 //extra code
 //extra code
 //extra code
-//extra code
