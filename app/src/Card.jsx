@@ -58,3 +58,5 @@ export default function Card({ selectedCategory, onAddToCart }) {
     </div>
   );
 }
+
+//extra code
